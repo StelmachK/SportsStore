@@ -22,7 +22,7 @@ namespace WebUI.Infrastructure
 
         private void AddBindings()
         {
-
+            //add bindings
         }
     }
 }
