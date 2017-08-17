@@ -10,6 +10,11 @@ namespace WebUI.Infrastructure
     public class NinjectDependencyResolver : IDependencyResolver
     {
         private IKernel kernel;
+        public NinjectDependencyResolver(IKernel kernelParam)
+        {
+            kernel = kernelParam;
+            AddBindings();
+        }
         public object GetService(Type serviceType)
         {
             return kernel.TryGet(serviceType);
