@@ -1,5 +1,5 @@
-﻿@using SportsStore.WebUI.Models;
-@model ProductsListViewModel
+﻿@using WebUI.HtmlHelpers
+@model WebUI.Models.ProductsListViewModel
 @{
     ViewBag.Title = "Produkty";
 }
@@ -11,3 +11,8 @@
         <h4>@p.Price.ToString("c")</h4>
     </div>
 }
+
+<div>
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+</div>
+
